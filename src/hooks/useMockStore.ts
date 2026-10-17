@@ -1,5 +1,16 @@
 import { useEffect, useState } from "react";
-import { MockStore, subscribeStore, type User, type OrganizerProfile, type Camp, type Registration, type Notification, type Conversation, type HealthcareDemandArea, type Facility } from "@/data/mockStore";
+import {
+  MockStore,
+  subscribeStore,
+  type User,
+  type OrganizerProfile,
+  type Camp,
+  type Registration,
+  type Notification,
+  type Conversation,
+  type HealthcareDemandArea,
+  type Facility,
+} from "@/data/mockStore";
 
 export function useMockStore() {
   const [, setVersion] = useState(0);

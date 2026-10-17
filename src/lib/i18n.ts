@@ -90,7 +90,8 @@ export const translations = {
     fieldPhone: "Mobile Phone Number",
     fieldEmail: "Email Address (Optional)",
     fieldMessage: "Health Concern or Accessibility Note (Optional)",
-    regSuccess: "Successfully registered! In-app reminder scheduled for 8:00 PM the evening before.",
+    regSuccess:
+      "Successfully registered! In-app reminder scheduled for 8:00 PM the evening before.",
     reminderScheduledLabel: "Reminder Scheduled",
     reminderTimeLabel: "8:00 PM on preceding day",
     simulateReminderBtn: "Test 8:00 PM Alert Now",
@@ -100,7 +101,8 @@ export const translations = {
     chatTitle: "Camp Query & Support",
     chatPlaceholder: "Type your query to the camp organizers...",
     chatSend: "Send",
-    noMessages: "No queries yet. Ask any questions about camp timings, documents, or doctor availability.",
+    noMessages:
+      "No queries yet. Ask any questions about camp timings, documents, or doctor availability.",
     replyPlaceholder: "Write your reply to this participant...",
     replySend: "Send Reply",
 
@@ -204,7 +206,8 @@ export const translations = {
 
     // User Registration & Reminders
     modalRegisterTitle: "स्वास्थ्य शिविर हेतु नि:शुल्क पंजीकरण",
-    modalRegisterSub: "नि:शुल्क पंजीकरण। शिविर से एक दिन पूर्व सायं 8:00 बजे स्वचालित अनुस्मारक मिलेगा।",
+    modalRegisterSub:
+      "नि:शुल्क पंजीकरण। शिविर से एक दिन पूर्व सायं 8:00 बजे स्वचालित अनुस्मारक मिलेगा।",
     fieldFullName: "पूरा नाम",
     fieldPhone: "मोबाइल नंबर",
     fieldEmail: "ईमेल (वैकल्पिक)",
@@ -323,12 +326,14 @@ export const translations = {
 
     // User Registration & Reminders
     modalRegisterTitle: "आरोग्य शिबिरासाठी मोफत नोंदणी",
-    modalRegisterSub: "मोफत नावनोंदणी. शिबिराच्या आदल्या दिवशी संध्याकाळी ८:०० वाजता आठवण (Reminder) दिली जाईल.",
+    modalRegisterSub:
+      "मोफत नावनोंदणी. शिबिराच्या आदल्या दिवशी संध्याकाळी ८:०० वाजता आठवण (Reminder) दिली जाईल.",
     fieldFullName: "पूर्ण नाव",
     fieldPhone: "मोबाईल नंबर",
     fieldEmail: "ईमेल (पर्यायी)",
     fieldMessage: "आरोग्य तक्रार किंवा विशेष सूचना (पर्यायी)",
-    regSuccess: "नोंदणी यशस्वी झाली! शिबिराच्या आदल्या दिवशी संध्याकाळी ८:०० वाजता आठवण देण्याची वेळ निश्चित झाली.",
+    regSuccess:
+      "नोंदणी यशस्वी झाली! शिबिराच्या आदल्या दिवशी संध्याकाळी ८:०० वाजता आठवण देण्याची वेळ निश्चित झाली.",
     reminderScheduledLabel: "आठवण निश्चित",
     reminderTimeLabel: "आदल्या दिवशी संध्याकाळी ८:०० वाजता",
     simulateReminderBtn: "संध्याकाळी ८ चा संदेश आता तपासा",

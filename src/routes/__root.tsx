@@ -79,16 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Community Health Access Platform" },
-      { name: "description", content: "Find verified health camps and public healthcare services near you." },
+      {
+        name: "description",
+        content: "Find verified health camps and public healthcare services near you.",
+      },
       { property: "og:title", content: "Community Health Access Platform" },
-      { property: "og:description", content: "Find verified health camps and public healthcare services near you." },
+      {
+        property: "og:description",
+        content: "Find verified health camps and public healthcare services near you.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),

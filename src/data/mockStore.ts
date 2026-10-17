@@ -15,7 +15,8 @@ export type Role = "organizer" | "user";
 export type Language = "en" | "hi" | "mr";
 export type CampStatus = "upcoming" | "completed" | "cancelled" | "draft";
 export type RegistrationStatus = "active" | "cancelled" | "attended";
-export type NotificationType = "new_camp" | "registration_confirmed" | "reminder" | "schedule_change" | "chat_reply";
+export type NotificationType =
+  "new_camp" | "registration_confirmed" | "reminder" | "schedule_change" | "chat_reply";
 export type OrganizerType = "NGO" | "Doctor" | "Hospital" | "Government";
 
 export interface User {
@@ -205,7 +206,8 @@ export const INITIAL_DEMAND_AREAS: HealthcareDemandArea[] = [
     nearestFacilityKm: 6.8,
     missingServices: ["General OPD", "Geriatric Care"],
     dataSource: "District Health Officer Audit",
-    notes: "Sub-centre OPD operational only 2 mornings per week. Elderly population needs attention.",
+    notes:
+      "Sub-centre OPD operational only 2 mornings per week. Elderly population needs attention.",
     lastUpdated: "2026-10-01",
   },
   {
@@ -243,13 +245,83 @@ export const INITIAL_DEMAND_AREAS: HealthcareDemandArea[] = [
 ];
 
 export const INITIAL_FACILITIES: Facility[] = [
-  { id: "f1", name: "Sassoon General Hospital", type: "Hospital", lat: 18.5286, lng: 73.8743, location: "Pune City", services: ["General Health", "Screening", "Vaccination", "Emergency", "Surgery"], hours: "24x7", phone: "020-26128000" },
-  { id: "f2", name: "PHC Wagholi", type: "PHC", lat: 18.5793, lng: 73.9787, location: "Wagholi, Haveli", services: ["Vaccination", "General Health", "Maternal Care"], hours: "9:00 AM – 5:00 PM", phone: "020-27051234" },
-  { id: "f3", name: "CHC Hadapsar", type: "CHC", lat: 18.5089, lng: 73.926, location: "Hadapsar", services: ["Screening", "General Health", "Vaccination", "Laboratory"], hours: "8:00 AM – 8:00 PM", phone: "020-26871122" },
-  { id: "f4", name: "PHC Loni Kalbhor", type: "PHC", lat: 18.4855, lng: 74.0236, location: "Loni Kalbhor", services: ["Vaccination", "General Health"], hours: "9:00 AM – 5:00 PM", phone: "020-26913344" },
-  { id: "f5", name: "District Hospital Aundh", type: "Hospital", lat: 18.5602, lng: 73.8077, location: "Aundh", services: ["General Health", "Screening", "Specialist OPD"], hours: "24x7", phone: "020-25897766" },
-  { id: "f6", name: "CHC Chakan", type: "CHC", lat: 18.7606, lng: 73.8636, location: "Chakan, Khed", services: ["Vaccination", "Screening", "General Health"], hours: "8:00 AM – 8:00 PM", phone: "02135-249900" },
-  { id: "f7", name: "PHC Uruli Kanchan", type: "PHC", lat: 18.4846, lng: 74.1393, location: "Uruli Kanchan", services: ["Vaccination", "General Health"], hours: "9:00 AM – 4:00 PM", phone: "020-26926655" },
+  {
+    id: "f1",
+    name: "Sassoon General Hospital",
+    type: "Hospital",
+    lat: 18.5286,
+    lng: 73.8743,
+    location: "Pune City",
+    services: ["General Health", "Screening", "Vaccination", "Emergency", "Surgery"],
+    hours: "24x7",
+    phone: "020-26128000",
+  },
+  {
+    id: "f2",
+    name: "PHC Wagholi",
+    type: "PHC",
+    lat: 18.5793,
+    lng: 73.9787,
+    location: "Wagholi, Haveli",
+    services: ["Vaccination", "General Health", "Maternal Care"],
+    hours: "9:00 AM – 5:00 PM",
+    phone: "020-27051234",
+  },
+  {
+    id: "f3",
+    name: "CHC Hadapsar",
+    type: "CHC",
+    lat: 18.5089,
+    lng: 73.926,
+    location: "Hadapsar",
+    services: ["Screening", "General Health", "Vaccination", "Laboratory"],
+    hours: "8:00 AM – 8:00 PM",
+    phone: "020-26871122",
+  },
+  {
+    id: "f4",
+    name: "PHC Loni Kalbhor",
+    type: "PHC",
+    lat: 18.4855,
+    lng: 74.0236,
+    location: "Loni Kalbhor",
+    services: ["Vaccination", "General Health"],
+    hours: "9:00 AM – 5:00 PM",
+    phone: "020-26913344",
+  },
+  {
+    id: "f5",
+    name: "District Hospital Aundh",
+    type: "Hospital",
+    lat: 18.5602,
+    lng: 73.8077,
+    location: "Aundh",
+    services: ["General Health", "Screening", "Specialist OPD"],
+    hours: "24x7",
+    phone: "020-25897766",
+  },
+  {
+    id: "f6",
+    name: "CHC Chakan",
+    type: "CHC",
+    lat: 18.7606,
+    lng: 73.8636,
+    location: "Chakan, Khed",
+    services: ["Vaccination", "Screening", "General Health"],
+    hours: "8:00 AM – 8:00 PM",
+    phone: "02135-249900",
+  },
+  {
+    id: "f7",
+    name: "PHC Uruli Kanchan",
+    type: "PHC",
+    lat: 18.4846,
+    lng: 74.1393,
+    location: "Uruli Kanchan",
+    services: ["Vaccination", "General Health"],
+    hours: "9:00 AM – 4:00 PM",
+    phone: "020-26926655",
+  },
 ];
 
 export const INITIAL_ORGANIZER_USER: User = {
@@ -283,7 +355,8 @@ export const INITIAL_ORGANIZER_PROFILE: OrganizerProfile = {
   organizationName: "Rotary Club Pune East Healthcare Foundation",
   contactPhone: "+91 98220 12345",
   contactEmail: "care@rotarypuneeast.org",
-  description: "Non-profit community healthcare mission organizing free diagnostics, eye checkups, and diabetes camps across rural Pune.",
+  description:
+    "Non-profit community healthcare mission organizing free diagnostics, eye checkups, and diabetes camps across rural Pune.",
   verified: true,
 };
 
@@ -295,7 +368,8 @@ export const INITIAL_CAMPS: Camp[] = [
     organizerType: "NGO",
     name: "Free Diabetes & BP Comprehensive Screening",
     category: "Diabetes Screening",
-    description: "Full blood sugar check (random & fasting advice), HbA1c consultation, blood pressure monitoring, and free 1-month prescription consultation with certified physicians.",
+    description:
+      "Full blood sugar check (random & fasting advice), HbA1c consultation, blood pressure monitoring, and free 1-month prescription consultation with certified physicians.",
     address: "Gram Panchayat Community Hall, Kesnand, Taluka Haveli, Pune 412207",
     latitude: 18.605,
     longitude: 74.025,
@@ -310,7 +384,8 @@ export const INITIAL_CAMPS: Camp[] = [
     services: ["Diabetes Screening", "General Health Checkup"],
     contactPhone: "+91 98220 12345",
     eligibility: "Open to all adults aged 18 and above. Bring previous prescriptions if any.",
-    instructions: "Please arrive in comfortable clothing. Fasting 8 hours prior is recommended for accurate glucose reading.",
+    instructions:
+      "Please arrive in comfortable clothing. Fasting 8 hours prior is recommended for accurate glucose reading.",
     createdAt: "2026-10-01T10:00:00Z",
     updatedAt: "2026-10-01T10:00:00Z",
   },
@@ -321,7 +396,8 @@ export const INITIAL_CAMPS: Camp[] = [
     organizerType: "Government",
     name: "Child Immunization & Pediatric Nutrition Drive",
     category: "Child Immunization",
-    description: "Scheduled national childhood vaccinations (BCG, Polio, Pentavalent, Measles-Rubella), height/weight growth monitoring, and free vitamin A supplements.",
+    description:
+      "Scheduled national childhood vaccinations (BCG, Polio, Pentavalent, Measles-Rubella), height/weight growth monitoring, and free vitamin A supplements.",
     address: "Anganwadi Main Centre, Near Primary School, Manjari, Pune 412307",
     latitude: 18.515,
     longitude: 73.98,
@@ -347,7 +423,8 @@ export const INITIAL_CAMPS: Camp[] = [
     organizerType: "NGO",
     name: "Women's Health & Cervical Awareness Outreach",
     category: "Cancer Screening & Women's Health",
-    description: "Specialized maternal and women's health consultation, anemia screening, cervical cancer awareness session, and confidential doctor consultations.",
+    description:
+      "Specialized maternal and women's health consultation, anemia screening, cervical cancer awareness session, and confidential doctor consultations.",
     address: "ZP School Ground Hall, Theur, Taluka Haveli, Pune 412110",
     latitude: 18.53,
     longitude: 74.05,
@@ -373,7 +450,8 @@ export const INITIAL_CAMPS: Camp[] = [
     organizerType: "Doctor",
     name: "General OPD & Senior Eye Checkup Camp",
     category: "Eye Checkup",
-    description: "Vision testing, cataract evaluation, refraction test for free prescription spectacles, and general physician OPD for joint pain and hypertension.",
+    description:
+      "Vision testing, cataract evaluation, refraction test for free prescription spectacles, and general physician OPD for joint pain and hypertension.",
     address: "Sant Dnyaneshwar Community Hall, Alandi, Pune 412105",
     latitude: 18.677,
     longitude: 73.896,
@@ -399,7 +477,8 @@ export const INITIAL_CAMPS: Camp[] = [
     organizerType: "Government",
     name: "HIV Testing, Counselling & Awareness Camp",
     category: "HIV Testing and Awareness",
-    description: "Voluntary, completely confidential rapid HIV screening, pre- and post-test counselling by certified ICTC counsellors, and awareness session on prevention.",
+    description:
+      "Voluntary, completely confidential rapid HIV screening, pre- and post-test counselling by certified ICTC counsellors, and awareness session on prevention.",
     address: "APMC Market Yard Hall, Shikrapur, Taluka Shirur, Pune 412208",
     latitude: 18.69,
     longitude: 74.13,
@@ -437,9 +516,7 @@ export const INITIAL_REGISTRATIONS: Registration[] = [
     status: "active",
     reminderScheduledAt: "2026-10-21T20:00:00+05:30", // 8:00 PM day before camp
     reminderStatus: "scheduled",
-    remindersSent: [
-      { channel: "in_app", at: "2026-10-16T14:22:00Z" }
-    ],
+    remindersSent: [{ channel: "in_app", at: "2026-10-16T14:22:00Z" }],
   },
   {
     id: "reg_2",
@@ -457,9 +534,7 @@ export const INITIAL_REGISTRATIONS: Registration[] = [
     status: "active",
     reminderScheduledAt: "2026-10-24T20:00:00+05:30",
     reminderStatus: "scheduled",
-    remindersSent: [
-      { channel: "in_app", at: "2026-10-16T16:40:00Z" }
-    ],
+    remindersSent: [{ channel: "in_app", at: "2026-10-16T16:40:00Z" }],
   },
   {
     id: "reg_3",
@@ -515,7 +590,8 @@ export const INITIAL_MESSAGES: Message[] = [
     senderId: "u_org_1",
     senderName: "Dr. Aruna Shinde",
     senderRole: "organizer",
-    messageText: "Namaste Ramesh ji. Please bring any recent prescription or Aadhaar card if available. No prior registration fees. Keep overnight fasting for the best sugar test result.",
+    messageText:
+      "Namaste Ramesh ji. Please bring any recent prescription or Aadhaar card if available. No prior registration fees. Keep overnight fasting for the best sugar test result.",
     createdAt: "2026-10-16T15:10:00Z",
     readAt: "2026-10-16T15:20:00Z",
   },
@@ -529,7 +605,8 @@ export const INITIAL_NOTIFICATIONS: Notification[] = [
     relatedRegistrationId: "reg_1",
     type: "registration_confirmed",
     title: "Registration Confirmed",
-    message: "You are registered for Free Diabetes & BP Screening on Oct 22, 2026 at Kesnand Hall. Reminder scheduled for Oct 21 at 8:00 PM.",
+    message:
+      "You are registered for Free Diabetes & BP Screening on Oct 22, 2026 at Kesnand Hall. Reminder scheduled for Oct 21 at 8:00 PM.",
     createdAt: "2026-10-16T14:22:00Z",
     readAt: null,
   },
@@ -539,7 +616,8 @@ export const INITIAL_NOTIFICATIONS: Notification[] = [
     relatedCampId: "c2",
     type: "new_camp",
     title: "New Health Camp Near You",
-    message: "Child Immunization & Pediatric Nutrition Drive has been scheduled in Manjari on Oct 25, 2026.",
+    message:
+      "Child Immunization & Pediatric Nutrition Drive has been scheduled in Manjari on Oct 25, 2026.",
     createdAt: "2026-10-16T09:00:00Z",
     readAt: "2026-10-16T10:00:00Z",
   },
@@ -693,7 +771,9 @@ export const MockStore = {
 
     // If date/time changed or cancelled, notify all registered beneficiaries
     if (updates.status === "cancelled" || updates.date || updates.startTime) {
-      const regs = MockStore.getRegistrations().filter((r) => r.campId === id && r.status === "active");
+      const regs = MockStore.getRegistrations().filter(
+        (r) => r.campId === id && r.status === "active",
+      );
       const notifs = MockStore.getNotifications();
       regs.forEach((r) => {
         notifs.unshift({
@@ -703,9 +783,10 @@ export const MockStore = {
           relatedRegistrationId: r.id,
           type: "schedule_change",
           title: updates.status === "cancelled" ? "Camp Cancelled" : "Camp Rescheduled",
-          message: updates.status === "cancelled"
-            ? `${updated.name} on ${updated.date} has been cancelled by the organizer.`
-            : `${updated.name} has been updated to ${updated.date} (${updated.startTime} - ${updated.endTime}).`,
+          message:
+            updates.status === "cancelled"
+              ? `${updated.name} on ${updated.date} has been cancelled by the organizer.`
+              : `${updated.name} has been updated to ${updated.date} (${updated.startTime} - ${updated.endTime}).`,
           createdAt: new Date().toISOString(),
           readAt: null,
         });
@@ -744,13 +825,16 @@ export const MockStore = {
   registerForCamp(
     campId: string,
     userInfo: { name: string; phone: string; email?: string; message?: string },
-    userOverride?: User
+    userOverride?: User,
   ): { success: boolean; error?: string; registration?: Registration } {
     const camp = MockStore.getCampById(campId);
     if (!camp) return { success: false, error: "Camp not found." };
-    if (camp.status !== "upcoming") return { success: false, error: "This camp is no longer accepting registrations." };
+    if (camp.status !== "upcoming")
+      return { success: false, error: "This camp is no longer accepting registrations." };
 
-    const activeRegistrations = MockStore.getCampRegistrations(campId).filter((r) => r.status === "active");
+    const activeRegistrations = MockStore.getCampRegistrations(campId).filter(
+      (r) => r.status === "active",
+    );
     if (camp.capacity > 0 && activeRegistrations.length >= camp.capacity) {
       return { success: false, error: "Camp capacity has been reached." };
     }
@@ -759,7 +843,7 @@ export const MockStore = {
 
     // Check for duplicate active registration
     const existing = activeRegistrations.find(
-      (r) => r.userId === currentUser.id || r.userPhone === userInfo.phone
+      (r) => r.userId === currentUser.id || r.userPhone === userInfo.phone,
     );
     if (existing) {
       return { success: false, error: "You are already actively registered for this camp." };
@@ -788,9 +872,7 @@ export const MockStore = {
       status: "active",
       reminderScheduledAt: reminderISO,
       reminderStatus: "scheduled",
-      remindersSent: [
-        { channel: "in_app", at: new Date().toISOString() },
-      ],
+      remindersSent: [{ channel: "in_app", at: new Date().toISOString() }],
     };
 
     // Save registration
@@ -931,7 +1013,7 @@ export const MockStore = {
   sendMessage(
     conversationId: string,
     messageText: string,
-    senderOverride?: { id: string; name: string; role: Role }
+    senderOverride?: { id: string; name: string; role: Role },
   ): Message {
     const user = senderOverride || MockStore.getCurrentUser();
     const convs = MockStore.getConversations();
